@@ -1,14 +1,13 @@
 from django.http import JsonResponse
 from rest_framework.response import Response
+from rest_framework.request import Request
 from citadel.models import Property
 from citadel.models.property import PropertySerializer, PropertySummarySerializer
-from django.http import Http404
 from rest_framework.views import APIView
-from rest_framework import status
 
 
 class PropertyList(APIView):
-    def get(self, request, format=None):
+    def get(self, request: Request) -> Response:
         """
         List all properties
         """
@@ -18,7 +17,7 @@ class PropertyList(APIView):
 
 
 class PropertyDetails(APIView):
-    def get(self, request, id, format=None):
+    def get(self, request: Request, id: str) -> Response:
         """
         Get the details of a single property
         """
