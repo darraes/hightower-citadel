@@ -11,4 +11,4 @@ class PropertySummarySerializer(serializers.ModelSerializer):
 class PropertySerializer(serializers.ModelSerializer):
     class Meta:
         model = Property
-        fields = ["id", "address", "size_m2", "bedrooms"]
+        fields = ["id", "address", "size_m2", "bedrooms", "created_at"]
