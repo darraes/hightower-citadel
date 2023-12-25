@@ -1,11 +1,12 @@
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 from citadel.views.property import PropertyList, PropertyDetails
-from citadel.views.login import LoginView
+from citadel.views.login import LoginView, LogoutView
 
 urlpatterns = [
     # Login
     path("login/", LoginView.as_view()),
+    path("logout/", LogoutView.as_view()),
     # Properties
     path("properties/", PropertyList.as_view(), name="properties"),
     path("property/<int:id>/", PropertyDetails.as_view(), name="property_detail"),

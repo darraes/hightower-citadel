@@ -20,6 +20,7 @@ class PropertyDetails(APIView):
         """
         Get the details of a single property
         """
+        print(request.user)
         property = Property.objects.get(id=id)
         serializer = PropertySerializer(property)
         return Response(serializer.data)
