@@ -6,7 +6,6 @@ from citadel.views.login import LoginView
 urlpatterns = [
     # Login
     path("login/", LoginView.as_view()),
-
     # Properties
     path("properties/", PropertyList.as_view(), name="properties"),
     path("property/<int:id>/", PropertyDetails.as_view(), name="property_detail"),
