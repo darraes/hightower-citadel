@@ -1,9 +1,9 @@
-from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework.request import Request
 from citadel.models import Property
 from citadel.models.property import PropertySerializer, PropertySummarySerializer
 from rest_framework.views import APIView
+from rest_framework.settings import api_settings
 
 
 class PropertyList(APIView):

@@ -6,3 +6,6 @@ python3 manage.py makemigrations citadel && python3 manage.py migrate
 
 ## Check typing
 mypy -p citadel --strict --exclude migration
+
+## TODO
+ - Eval the usage of ```from django.http import JsonResponse```
