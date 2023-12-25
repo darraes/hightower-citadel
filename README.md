@@ -5,7 +5,7 @@ https://realpython.com/django-setup/
 python3 manage.py makemigrations citadel && python3 manage.py migrate
 
 ## Check typing
-mypy -p citadel --strict --exclude migration
+mypy -p citadel --strict --exclude "migration|apps"
 
 ## TODO
  - Eval the usage of ```from django.http import JsonResponse```
