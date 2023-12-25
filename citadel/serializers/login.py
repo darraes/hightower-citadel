@@ -34,10 +34,10 @@ class LoginSerializer(serializers.Serializer):
 
             if not user:
                 # If we don't have a regular user, raise a ValidationError
-                msg = "Access denied: wrong username or password."
-                raise serializers.ValidationError(msg, code="authorization")
+                msg = "Acesso negado: login ou senha inválidos."
+                raise serializers.AuthenticationFailed()
         else:
-            msg = 'Both "username" and "password" are required.'
+            msg = 'Login e senha são obrigatórios.'
             raise serializers.ValidationError(msg, code="authorization")
 
         # We have a valid user, put it in the serializer's validated_data.
