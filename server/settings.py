@@ -64,6 +64,23 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "https://127.0.0.1:8000",
+    "https://localhost:8000",
+]
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = "None"
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "https://127.0.0.1:8000",
+    "https://localhost:8000",
+]
+
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = "None"
 
 ROOT_URLCONF = "server.urls"
 
@@ -138,7 +155,7 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-SESSION_TIME_SECS= 60 * 60  # 1 hour
-SESSION_EXPIRE_AT_BROWSER_CLOSE= True
+SESSION_TIME_SECS = 60 * 60  # 1 hour
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_AGE = SESSION_TIME_SECS
 SESSION_IDLE_TIMEOUT = SESSION_TIME_SECS
