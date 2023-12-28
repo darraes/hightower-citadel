@@ -1,7 +1,6 @@
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 from citadel.views.property import PropertyList, PropertyDetails
-from citadel.views.login import LoginView, LogoutView
 from dj_rest_auth.jwt_auth import get_refresh_view
 from dj_rest_auth.registration.views import RegisterView
 from dj_rest_auth.views import LoginView, LogoutView, UserDetailsView
