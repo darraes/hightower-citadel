@@ -16,5 +16,8 @@ mypy -p citadel --strict --exclude "migration|apps"
     "password": "###"
 }
 
+## Authentication was done using
+https://testdriven.io/blog/django-rest-authjs/
+
 ## TODO
  - Eval the usage of ```from django.http import JsonResponse```

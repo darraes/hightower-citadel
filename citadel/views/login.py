@@ -5,7 +5,6 @@ from rest_framework.request import Request
 from django.contrib.auth import login, logout
 from rest_framework import status
 from citadel.serializers.login import LoginSerializer
-from django.views.decorators.csrf import csrf_exempt
 
 
 class LoginView(views.APIView):

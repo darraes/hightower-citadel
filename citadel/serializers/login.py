@@ -35,7 +35,7 @@ class LoginSerializer(serializers.Serializer):
             if not user:
                 # If we don't have a regular user, raise a ValidationError
                 msg = "Acesso negado: login ou senha inválidos."
-                raise serializers.AuthenticationFailed()
+                raise serializers.ValidationError(msg, code="authorization")
         else:
             msg = 'Login e senha são obrigatórios.'
             raise serializers.ValidationError(msg, code="authorization")
